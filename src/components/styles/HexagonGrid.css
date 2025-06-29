@@ -1,0 +1,307 @@
+:root {
+    --light-gray: #c9c9c9;
+    --dark-gray: #9fa0a2;
+    --green: #85b13a;
+    --ltgreen: #a9c875;
+    --dkgreen: #6a8d2e;
+    --blue: #2f9ba7;
+    --ltblue: #6db9c1;
+    --dkblue: #257c85;
+    --yellow: #e3a928;
+    --ltyellow: #ebc268;
+    --dkyellow: #b58720;
+    --red: #cc374d;
+    --ltred: #db7382;
+    --dkred: #a32c3d;
+  }
+  
+  *,
+  *:after,
+  *:before {
+    box-sizing: border-box;
+  }
+  
+  .hexagon-grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .hexagon {
+    position: relative;
+    width: 140px;
+    height: 80.83px;
+    background-color: var(--dark-gray);
+    margin: 44px 2px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hexagon::before,
+  .hexagon::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+  }
+  
+  .hexagon::before {
+    bottom: 100%;
+    border-bottom: 40.41px solid var(--dark-gray);
+  }
+  
+  .hexagon::after {
+    top: 100%;
+    border-top: 40.41px solid var(--dark-gray);
+  }
+  
+  .hexagon-inner {
+    position: relative;
+    width: 136px;
+    height: 78.52px;
+    background-color: var(--light-gray);
+    margin: 39.26px 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .hexagon-inner::before,
+  .hexagon-inner::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 68px solid transparent;
+    border-right: 68px solid transparent;
+    z-index: 1;
+  }
+  
+  .hexagon-inner::before {
+    bottom: 100%;
+    border-bottom: 39.26px solid var(--light-gray);
+  }
+  
+  .hexagon-inner::after {
+    top: 100%;
+    border-top: 39.26px solid var(--light-gray);
+  }
+  
+  .hexagon-avatar-img {
+    position: absolute;
+    width: 42px;
+    border-radius: 42px;
+    border: 2px solid #fff;
+    top: -24px;
+    z-index: 1;
+  }
+  
+  .hexagon-name {
+    position: absolute;
+    width: 130px;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    top: 25px;
+    z-index: 1;
+  }
+  
+  .hexagon-metric-label {
+    position: absolute;
+    width: 130px;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 100;
+    font-size: 12px;
+    top: 48px;
+    z-index: 1;
+  }
+  
+  .hexagon-featured-score {
+    position: absolute;
+    z-index: 2;
+    bottom: -24px;
+    width: 32px;
+    height: 32px;
+    border-radius: 36px;
+    border: 1px solid var(--dark-gray);
+    text-align: center;
+    padding-top: 9px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    color: #fff;
+    background: var(--light-gray);
+  }
+  
+  .hexagon-icon-left,
+  .hexagon-icon-right {
+    position: absolute;
+    z-index: 2;
+    top: 58px;
+    width: 24px;
+    height: 24px;
+    border-radius: 24px;
+    border: 1px solid var(--dark-gray);
+    background: var(--light-gray);
+    color: var(--dark-gray);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+  }
+  
+  .hexagon-icon-left {
+    left: 3px;
+  }
+  
+  .hexagon-icon-right {
+    right: 3px;
+  }
+  
+  /* Hexagon Colors */
+  .hexagon-green {
+    background-color: var(--green);
+  }
+  
+  .hexagon-green::before {
+    border-bottom: 40.41px solid var(--green);
+  }
+  
+  .hexagon-green::after {
+    border-top: 40.41px solid var(--green);
+  }
+  
+  .hexagon-green .hexagon-inner {
+    background-color: var(--ltgreen);
+  }
+  
+  .hexagon-green .hexagon-inner::before {
+    border-bottom: 39.26px solid var(--ltgreen);
+  }
+  
+  .hexagon-green .hexagon-inner::after {
+    border-top: 39.26px solid var(--ltgreen);
+  }
+  
+  .hexagon-green .hexagon-featured-score {
+    background: var(--green);
+    border-color: var(--green);
+  }
+  
+  .hexagon-blue {
+    background-color: var(--blue);
+  }
+  
+  .hexagon-blue::before {
+    border-bottom: 40.41px solid var(--blue);
+  }
+  
+  .hexagon-blue::after {
+    border-top: 40.41px solid var(--blue);
+  }
+  
+  .hexagon-blue .hexagon-inner {
+    background-color: var(--ltblue);
+  }
+  
+  .hexagon-blue .hexagon-inner::before {
+    border-bottom: 39.26px solid var(--ltblue);
+  }
+  
+  .hexagon-blue .hexagon-inner::after {
+    border-top: 39.26px solid var(--ltblue);
+  }
+  
+  .hexagon-blue .hexagon-featured-score {
+    background: var(--blue);
+    border-color: var(--blue);
+  }
+  
+  .hexagon-yellow {
+    background-color: var(--yellow);
+  }
+  
+  .hexagon-yellow::before {
+    border-bottom: 40.41px solid var(--yellow);
+  }
+  
+  .hexagon-yellow::after {
+    border-top: 40.41px solid var(--yellow);
+  }
+  
+  .hexagon-yellow .hexagon-inner {
+    background-color: var(--ltyellow);
+  }
+  
+  .hexagon-yellow .hexagon-inner::before {
+    border-bottom: 39.26px solid var(--ltyellow);
+  }
+  
+  .hexagon-yellow .hexagon-inner::after {
+    border-top: 39.26px solid var(--ltyellow);
+  }
+  
+  .hexagon-yellow .hexagon-featured-score {
+    background: var(--yellow);
+    border-color: var(--yellow);
+  }
+  
+  .hexagon-red {
+    background-color: var(--red);
+  }
+  
+  .hexagon-red::before {
+    border-bottom: 40.41px solid var(--red);
+  }
+  
+  .hexagon-red::after {
+    border-top: 40.41px solid var(--red);
+  }
+  
+  .hexagon-red .hexagon-inner {
+    background-color: var(--ltred);
+  }
+  
+  .hexagon-red .hexagon-inner::before {
+    border-bottom: 39.26px solid var(--ltred);
+  }
+  
+  .hexagon-red .hexagon-inner::after {
+    border-top: 39.26px solid var(--ltred);
+  }
+  
+  .hexagon-red .hexagon-featured-score {
+    background: var(--red);
+    border-color: var(--red);
+  }
+  
+  /* Icon Color Coding */
+  .hexagon-icon-green {
+    background: var(--ltgreen);
+    border-color: var(--green);
+    color: var(--dkgreen);
+  }
+  
+  .hexagon-icon-blue {
+    background: var(--ltblue);
+    border-color: var(--blue);
+    color: var(--dkblue);
+  }
+  
+  .hexagon-icon-yellow {
+    background: var(--ltyellow);
+    border-color: var(--yellow);
+    color: var(--dkyellow);
+  }
+  
+  .hexagon-icon-red {
+    background: var(--ltred);
+    border-color: var(--red);
+    color: var(--dkred);
+  }
