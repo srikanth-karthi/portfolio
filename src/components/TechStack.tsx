@@ -14,21 +14,41 @@ import {
 const textureLoader = new THREE.TextureLoader();
 const imageUrls = [
   "/images/react2.webp",
-  "/images/next2.webp",
+  "/images/postgress.webp",
   "/images/node2.webp",
   "/images/express.webp",
   "/images/mongo.webp",
+  "/images/jenkins.webp",
+  "/images/helm.webp",
+  "/images/k8.webp",
+  "/images/docker.webp",
   "/images/mysql.webp",
   "/images/typescript.webp",
   "/images/javascript.webp",
+  "/images/python.webp",
+  "/images/java.webp",
+  "/images/redis.webp",
+  "/images/grafana.webp",
+  "/images/Prometheus.webp",
+  "/images/nginx.webp",
+  "/images/c.webp",
+  "/images/c++.webp",
+  "/images/csharp.webp",
+  "/images/go.webp",
+  "/images/angular.webp",
+  "/images/aws.webp",
+  "/images/Azure.webp",
+  "/images/linux.webp",
+  "/images/git.webp",
+  "/images/ansible.webp",
+  "/images/terraform.webp",
+  "/images/net.webp",
+  "/images/ad.webp"
 ];
 const textures = imageUrls.map((url) => textureLoader.load(url));
 
 const sphereGeometry = new THREE.SphereGeometry(1, 28, 28);
 
-const spheres = [...Array(30)].map(() => ({
-  scale: [0.7, 1, 0.8, 1, 1][Math.floor(Math.random() * 5)],
-}));
 
 type SphereProps = {
   vec?: THREE.Vector3;
@@ -67,8 +87,8 @@ function SphereGeo({
   return (
     <RigidBody
       linearDamping={0.75}
-      angularDamping={0.15}
-      friction={0.2}
+      angularDamping={1}
+      friction={0}
       position={[r(20), r(20) - 25, r(20) - 10]}
       ref={api}
       colliders={false}
@@ -152,19 +172,20 @@ const TechStack = () => {
     };
   }, []);
   const materials = useMemo(() => {
-    return textures.map(
-      (texture) =>
-        new THREE.MeshPhysicalMaterial({
+    return textures.map((texture, i) => {
+      console.log(`Texture ${i}:`, texture.image);
+      return new THREE.MeshPhysicalMaterial({
           map: texture,
           emissive: "#ffffff",
           emissiveMap: texture,
-          emissiveIntensity: 0.3,
-          metalness: 0.5,
-          roughness: 1,
-          clearcoat: 0.1,
-        })
-    );
+          emissiveIntensity: 0.1,
+          metalness: 1,
+          roughness: 2,
+          clearcoat: 0.2,
+      });
+  });
   }, []);
+
 
   return (
     <div className="techstack">
@@ -187,17 +208,17 @@ const TechStack = () => {
           shadow-mapSize={[512, 512]}
         />
         <directionalLight position={[0, 5, -4]} intensity={2} />
-        <Physics gravity={[0, 0, 0]}>
-          <Pointer isActive={isActive} />
-          {spheres.map((props, i) => (
-            <SphereGeo
-              key={i}
-              {...props}
-              material={materials[Math.floor(Math.random() * materials.length)]}
-              isActive={isActive}
-            />
-          ))}
-        </Physics>
+<Physics gravity={[0, 0, 0]}>
+    <Pointer isActive={isActive} />
+    {materials.map((material, i) => (
+        <SphereGeo
+            key={i}
+            scale={1} // you can change this per image if needed
+            material={material}
+            isActive={isActive}
+        />
+    ))}
+</Physics>
         <Environment
           files="/models/char_enviorment.hdr"
           environmentIntensity={0.5}
