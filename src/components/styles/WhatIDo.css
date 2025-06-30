@@ -176,6 +176,7 @@
   transition: 0.5s;
   max-width: 0%;
   overflow: hidden;
+  box-sizing: border-box;
   opacity: 0.8;
   animation: whatBorders 1.2s 1 forwards;
 }

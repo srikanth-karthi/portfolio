@@ -22,7 +22,8 @@ const certs = [
     issued: "Mar 2025",
     expires: "Mar 2027",
     link: "https://www.credly.com/badges/a47ff647-67be-4c71-b598-9203ccdf258d/linked_in_profile",
-    skills: ["Terraform"],
+    skills: ["Infrastructure as Code (IaC)",
+      "Terraform Core Concepts",],
   },
   {
     logo: "/images/aws-academy.png",
@@ -38,7 +39,9 @@ const certs = [
     issuer: "Broadcom",
     issued: "Oct 2022",
     link: "https://www.credly.com/earner/earned/badge/5fb5549e-088b-4f3a-b187-649ff7a3b7af",
-    skills: ["Amazon Web Services (AWS)", "Cloud Computing"],
+    skills: ["Virtual Machines",
+      "Hypervisors",
+      "Cloud Models (IaaS, PaaS, SaaS)",]
   },
   {
     logo: "/images/into-cyber.png",
@@ -46,7 +49,11 @@ const certs = [
     issuer: "Cisco Networking Academy",
     issued: "Jul 2023",
     link: "https://www.credly.com/badges/3b60ec66-e1b4-4175-a528-778805f311b0/print",
-    skills: ["Amazon Web Services (AWS)", "Cloud Computing"],
+    skills: ["Cybersecurity Fundamentals",
+      "Threats & Vulnerabilities",
+      "Network Security",
+      "Access Control",
+],
   },
 
 

@@ -6,13 +6,12 @@ const About = () => {
       <div className="about-me">
         <h3 className="title">About Me</h3>
         <p className="para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-          dolores numquam iusto Ratione earum ducimus autem id iure pariatur
-          dolorum quae maiores.
+          Builder by heart, automator by craft. I blend code and cloud to create smooth, scalable systems — where Dev meets Ops, that’s where I thrive.
         </p>
       </div>
     </div>
   );
 };
+
 
 export default About;

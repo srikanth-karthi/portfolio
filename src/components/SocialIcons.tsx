@@ -5,7 +5,7 @@ import {
   FaXTwitter,
   FaMedium,
 } from "react-icons/fa6";
-import { SiLeetcode,SiHackerrank,SiTerraform } from "react-icons/si";
+import { SiLeetcode,SiHackerrank,SiTerraform, SiCredly } from "react-icons/si";
 import { VscExtensions } from "react-icons/vsc";
 import { GiNewspaper } from "react-icons/gi";
 import { IoExtensionPuzzle } from "react-icons/io5";
@@ -95,7 +95,7 @@ const SocialIcons = () => {
           </a>
         </span>
         <span>
-          <a href="hackerrank.com/profile/srikanthkarthi21" target="_blank">
+          <a href="https://www.hackerrank.com/profile/srikanthkarthi21" target="_blank">
             <SiHackerrank />
           </a>
         </span>
@@ -119,11 +119,16 @@ const SocialIcons = () => {
             <IoExtensionPuzzle />
           </a>
         </span>
+        <span>  
+          <a href="https://www.credly.com/users/srikanth-karthi" target="_blank">
+        <SiCredly />
+          </a>
+        </span>
 
   
       </div>
-      <a className="resume-button" href="#">
-        <HoverLinks text="RESUME" />
+      <a className="resume-button" target="_blank" href="https://srikanth-karthi.github.io/portfolio/">
+        <HoverLinks text="Earlier Creations" />
         <span>
           <TbNotes />
         </span>
