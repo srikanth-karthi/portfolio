@@ -8,7 +8,7 @@ gsap.registerPlugin(useGSAP);
 
 const certs = [
   {
-    logo: "/images/aws-sa.png",
+    logo: `${import.meta.env.BASE_URL}images/aws-sa.png`,
     title: "AWS Certified Solutions Architect – Associate",
     issuer: "Amazon Web Services (AWS)",
     issued: "Jun 2025",
@@ -16,17 +16,16 @@ const certs = [
     skills: ["Amazon Web Services (AWS)", "Cloud Computing"],
   },
   {
-    logo: "/images/cert-terrfrom.png",
+    logo: `${import.meta.env.BASE_URL}images/cert-terrfrom.png`,
     title: "HashiCorp Certified: Terraform Associate (003)",
     issuer: "HashiCorp",
     issued: "Mar 2025",
     expires: "Mar 2027",
     link: "https://www.credly.com/badges/a47ff647-67be-4c71-b598-9203ccdf258d/linked_in_profile",
-    skills: ["Infrastructure as Code (IaC)",
-      "Terraform Core Concepts",],
+    skills: ["Infrastructure as Code (IaC)", "Terraform Core Concepts"],
   },
   {
-    logo: "/images/aws-academy.png",
+    logo: `${import.meta.env.BASE_URL}images/aws-academy.png`,
     title: "AWS Academy Cloud Foundations",
     issuer: "Amazon Web Services (AWS)",
     issued: "Jul 2023",
@@ -34,32 +33,32 @@ const certs = [
     skills: ["Amazon Web Services (AWS)", "Cloud Computing"],
   },
   {
-    logo: "/images/it-academy-cloud-and-virtualization-concepts.png",
+    logo: `${import.meta.env.BASE_URL}images/it-academy-cloud-and-virtualization-concepts.png`,
     title: "Cloud and Virtualization Concepts",
     issuer: "Broadcom",
     issued: "Oct 2022",
     link: "https://www.credly.com/earner/earned/badge/5fb5549e-088b-4f3a-b187-649ff7a3b7af",
-    skills: ["Virtual Machines",
+    skills: [
+      "Virtual Machines",
       "Hypervisors",
-      "Cloud Models (IaaS, PaaS, SaaS)",]
+      "Cloud Models (IaaS, PaaS, SaaS)",
+    ],
   },
   {
-    logo: "/images/into-cyber.png",
+    logo: `${import.meta.env.BASE_URL}images/into-cyber.png`,
     title: "Introduction to Cybersecurity",
     issuer: "Cisco Networking Academy",
     issued: "Jul 2023",
     link: "https://www.credly.com/badges/3b60ec66-e1b4-4175-a528-778805f311b0/print",
-    skills: ["Cybersecurity Fundamentals",
+    skills: [
+      "Cybersecurity Fundamentals",
       "Threats & Vulnerabilities",
       "Network Security",
       "Access Control",
-],
+    ],
   },
-
-
-
-
 ];
+
 
 const Work = () => {
   useGSAP(() => {

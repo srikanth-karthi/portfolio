@@ -44,7 +44,12 @@ const Navbar = () => {
     <>
       <div className="header">
         <a href="/#" className="navbar-title" data-cursor="disable">
-        <img className="logo-img" src="../../public/images/logo.png" alt="logo" />
+<img
+  className="logo-img"
+  src={`${import.meta.env.BASE_URL}images/logo.png`}
+  alt="logo"
+/>
+
         </a>
         <a
           href="mailto:srikanthkarthi2003@gmail.com"

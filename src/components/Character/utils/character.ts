@@ -16,10 +16,11 @@ const setCharacter = (
   const loadCharacter = () => {
     return new Promise<GLTF | null>(async (resolve, reject) => {
       try {
-        const encryptedBlob = await decryptFile(
-          "/models/character.enc",
-          "Character3D#@"
-        );
+const encryptedBlob = await decryptFile(
+  `${import.meta.env.BASE_URL}models/character.enc`,
+  "Character3D#@"
+);
+
         const blobUrl = URL.createObjectURL(new Blob([encryptedBlob]));
 
         let character: THREE.Object3D;

@@ -13,38 +13,39 @@ import {
 
 const textureLoader = new THREE.TextureLoader();
 const imageUrls = [
-  "/images/react2.webp",
-  "/images/postgress.webp",
-  "/images/node2.webp",
-  "/images/express.webp",
-  "/images/mongo.webp",
-  "/images/jenkins.webp",
-  "/images/helm.webp",
-  "/images/k8.webp",
-  "/images/docker.webp",
-  "/images/mysql.webp",
-  "/images/typescript.webp",
-  "/images/javascript.webp",
-  "/images/python.webp",
-  "/images/java.webp",
-  "/images/redis.webp",
-  "/images/grafana.webp",
-  "/images/Prometheus.webp",
-  "/images/nginx.webp",
-  "/images/c.webp",
-  "/images/c++.webp",
-  "/images/csharp.webp",
-  "/images/go.webp",
-  "/images/angular.webp",
-  "/images/aws.webp",
-  "/images/Azure.webp",
-  "/images/linux.webp",
-  "/images/git.webp",
-  "/images/ansible.webp",
-  "/images/terraform.webp",
-  "/images/net.webp",
-  "/images/ad.webp"
-];
+  "react2.webp",
+  "postgress.webp",
+  "node2.webp",
+  "express.webp",
+  "mongo.webp",
+  "jenkins.webp",
+  "helm.webp",
+  "k8.webp",
+  "docker.webp",
+  "mysql.webp",
+  "typescript.webp",
+  "javascript.webp",
+  "python.webp",
+  "java.webp",
+  "redis.webp",
+  "grafana.webp",
+  "Prometheus.webp",
+  "nginx.webp",
+  "c.webp",
+  "c++.webp",
+  "csharp.webp",
+  "go.webp",
+  "angular.webp",
+  "aws.webp",
+  "Azure.webp",
+  "linux.webp",
+  "git.webp",
+  "ansible.webp",
+  "terraform.webp",
+  "net.webp",
+  "ad.webp"
+].map(file => `${import.meta.env.BASE_URL}images/${file}`);
+
 const textures = imageUrls.map((url) => textureLoader.load(url));
 
 const sphereGeometry = new THREE.SphereGeometry(1, 28, 28);
@@ -220,7 +221,8 @@ const TechStack = () => {
     ))}
 </Physics>
         <Environment
-          files="/models/char_enviorment.hdr"
+      files={`${import.meta.env.BASE_URL}models/char_enviorment.hdr`}
+
           environmentIntensity={0.5}
           environmentRotation={[0, 4, 2]}
         />
