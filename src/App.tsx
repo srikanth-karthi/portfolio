@@ -12,7 +12,7 @@ const App = () => {
 
   useEffect(() => {
     if (import.meta.env.PROD) {
-      clarity.init("s7mkjrwgdt"); // replace with your Clarity project ID
+      clarity.init("s7mkjrwgdt"); 
     }
   }, []);
   return (
